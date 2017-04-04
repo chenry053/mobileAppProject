@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,18 +22,75 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="IQR-9h-9Ao">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="IQR-9h-9Ao">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="jP8-1G-aNs"/>
+                                </connections>
                             </mapView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="hnI-4b-v8k">
+                                <rect key="frame" x="16" y="20" width="343" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="9wZ-is-kVe"/>
+                                </connections>
+                            </searchBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HtX-IV-5kw">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nSS-8R-DAP">
+                                        <rect key="frame" x="318" y="10" width="51" height="31"/>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opposite" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGD-mk-L7O">
+                                        <rect key="frame" x="8" y="8" width="305" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="nSS-8R-DAP" secondAttribute="trailing" id="1KW-77-hva"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="fGD-mk-L7O" secondAttribute="bottom" id="46e-kp-kvM"/>
+                                    <constraint firstItem="fGD-mk-L7O" firstAttribute="leading" secondItem="HtX-IV-5kw" secondAttribute="leadingMargin" id="E1K-HV-Qyb"/>
+                                    <constraint firstItem="nSS-8R-DAP" firstAttribute="leading" secondItem="fGD-mk-L7O" secondAttribute="trailing" constant="5" id="Ils-TZ-E3P"/>
+                                    <constraint firstAttribute="height" constant="50" id="bUO-ZU-83P"/>
+                                    <constraint firstItem="nSS-8R-DAP" firstAttribute="centerY" secondItem="HtX-IV-5kw" secondAttribute="centerY" id="pQj-XA-UxA"/>
+                                    <constraint firstItem="fGD-mk-L7O" firstAttribute="top" secondItem="HtX-IV-5kw" secondAttribute="topMargin" id="r4q-rj-uRh"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hnI-4b-v8k" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="1Vi-IK-cXJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hnI-4b-v8k" secondAttribute="trailing" id="43J-aD-aAh"/>
+                            <constraint firstAttribute="bottom" secondItem="HtX-IV-5kw" secondAttribute="bottom" id="6vU-fc-JTL"/>
+                            <constraint firstAttribute="trailing" secondItem="HtX-IV-5kw" secondAttribute="trailing" id="J7O-qe-AdC"/>
+                            <constraint firstItem="IQR-9h-9Ao" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KbJ-Ca-BtL"/>
+                            <constraint firstAttribute="trailing" secondItem="IQR-9h-9Ao" secondAttribute="trailing" id="MwX-KM-GdN"/>
+                            <constraint firstItem="hnI-4b-v8k" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="O6f-Kg-HGa"/>
+                            <constraint firstItem="HtX-IV-5kw" firstAttribute="top" secondItem="IQR-9h-9Ao" secondAttribute="bottom" id="nj1-Z5-j0y"/>
+                            <constraint firstItem="IQR-9h-9Ao" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="vWE-0N-WI3"/>
+                            <constraint firstItem="HtX-IV-5kw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vkN-Kd-zcg"/>
+                        </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="map" destination="IQR-9h-9Ao" id="Ddh-zp-8tk"/>
+                        <outlet property="searchDisplayController" destination="0Gs-iE-DN4" id="nYp-B0-gYY"/>
+                        <outlet property="switcher" destination="nSS-8R-DAP" id="cnk-Pi-hjE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="0Gs-iE-DN4">
+                    <connections>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="K0Z-Le-VVL"/>
+                        <outlet property="searchBar" destination="hnI-4b-v8k" id="FUG-ND-dhk"/>
+                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="noO-FT-KuV"/>
+                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="ASY-xC-6Ln"/>
+                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="0QQ-A2-GTS"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="116" y="123.68815592203899"/>
         </scene>

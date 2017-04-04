@@ -15,6 +15,7 @@
 		3F14A0B01E8EE756003F5C1A /* userlocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F14A0AF1E8EE756003F5C1A /* userlocationTests.swift */; };
 		3F14A0BB1E8EE756003F5C1A /* userlocationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F14A0BA1E8EE756003F5C1A /* userlocationUITests.swift */; };
 		3F14A0CA1E8EE83B003F5C1A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F14A0C91E8EE83B003F5C1A /* CoreLocation.framework */; };
+		EFAF21781E935B9C00FDBC3F /* reverseEarth.gif in Resources */ = {isa = PBXBuildFile; fileRef = EFAF21771E935B9C00FDBC3F /* reverseEarth.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		3F14A0BA1E8EE756003F5C1A /* userlocationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userlocationUITests.swift; sourceTree = "<group>"; };
 		3F14A0BC1E8EE756003F5C1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F14A0C91E8EE83B003F5C1A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		EFAF21771E935B9C00FDBC3F /* reverseEarth.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = reverseEarth.gif; path = ../../reverseEarth.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				3F14A09A1E8EE756003F5C1A /* AppDelegate.swift */,
 				3F14A09C1E8EE756003F5C1A /* ViewController.swift */,
 				3F14A09E1E8EE756003F5C1A /* Main.storyboard */,
+				EFAF21771E935B9C00FDBC3F /* reverseEarth.gif */,
 				3F14A0A11E8EE756003F5C1A /* Assets.xcassets */,
 				3F14A0A31E8EE756003F5C1A /* LaunchScreen.storyboard */,
 				3F14A0A61E8EE756003F5C1A /* Info.plist */,
@@ -244,6 +247,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFAF21781E935B9C00FDBC3F /* reverseEarth.gif in Resources */,
 				3F14A0A51E8EE756003F5C1A /* LaunchScreen.storyboard in Resources */,
 				3F14A0A21E8EE756003F5C1A /* Assets.xcassets in Resources */,
 				3F14A0A01E8EE756003F5C1A /* Main.storyboard in Resources */,
@@ -517,6 +521,7 @@
 				3F14A0C11E8EE756003F5C1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F14A0C21E8EE756003F5C1A /* Build configuration list for PBXNativeTarget "userlocationTests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +530,7 @@
 				3F14A0C41E8EE756003F5C1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F14A0C51E8EE756003F5C1A /* Build configuration list for PBXNativeTarget "userlocationUITests" */ = {
 			isa = XCConfigurationList;
@@ -533,6 +539,7 @@
 				3F14A0C71E8EE756003F5C1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
